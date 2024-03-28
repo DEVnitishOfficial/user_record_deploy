@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+const API_URL = ''
 function Home() {
   const [loading, setLoading] = useState(false);
   const [searchName, setSearchName] = useState();
@@ -12,7 +13,7 @@ function Home() {
     e.preventDefault();
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/user/getUser/${searchName}`
+        `${API_URL}/api/user/getUser/${searchName}`
       );
       console.log("response", response);
       console.log("data", response.data);

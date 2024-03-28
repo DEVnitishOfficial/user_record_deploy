@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom'
 import axios from 'axios'
 
+const API_URL = ''
 function SignUp() {
 
   const navigate = useNavigate()
@@ -33,7 +34,7 @@ function SignUp() {
         try {
           const response = await axios({
             method: "post",
-            url: 'http://localhost:3000' + "/api/user/submitForm",
+            url: API_URL + "/api/user/submitForm",
             data: userData
           });
   

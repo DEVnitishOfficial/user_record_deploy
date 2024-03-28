@@ -42,9 +42,7 @@ app.listen(PORT, async () => {
     console.log(`Server is listening at http://localhost:${PORT}`)
 })
 
-app.use("/api/user",(req,res) => {
-  res.json("Route checking successfull")
-});
+
 
 
 export default app;
