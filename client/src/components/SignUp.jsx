@@ -53,14 +53,14 @@ function SignUp() {
       }
 
   return (
-    <div className="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 m-4 ">
+    <div className="w-auto p-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 m-4  ">
 
         <form  className="space-y-6" onSubmit={(e) => handleSignUp(e)}>
         <h5 className="text-xl font-medium text-gray-900 dark:text-white flex justify-center">
          Registration Form
          </h5>
         
-        <div className='flex space-x-32'>
+         <div className='flex space-x-32 max-[400px]:flex-col  max-[400px]:space-x-0 px-10 max-[400px]:px-0 '>
            {/* Personal Information Section */}
            <div className="mb-6">
           <h6 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
@@ -318,6 +318,7 @@ function SignUp() {
         </div>
 
         </div>
+
         </div>
 
          {/*  signUp button */}

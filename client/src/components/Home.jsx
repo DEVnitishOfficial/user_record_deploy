@@ -81,104 +81,136 @@ function Home() {
       )}
       <div>
         {userDetails ? (
-          <div className="overflow-x-auto flex space-x-10 text-xl">
-            <div>
-              <h1 className="font-bold text-white text-3xl">
-                Personal Infromation
-              </h1>
-              <table className="table">
-                {/* head */}
+          <div className='overflow-x-auto space-x-5 space-y-5 justify-center items-center text-xl xl:flex max-[768px]:flex-col max-[768px]:mx-10 '>
 
-                <thead className="text-yellow-400">
-                  <tr>
-                    <th>Sr. No.</th>
-                    <th>Title</th>
-                    <th>Content</th>
-                  </tr>
-                </thead>
-                <tbody className="text-green-500">
-                  {/* row 1 */}
-                  <tr>
-                    <th>1. </th>
-                    <td>FullName</td>
-                    <td>{userDetails.data.fullName}</td>
-                  </tr>
-                  {/* row 2 */}
-                  <tr className="hover">
-                    <th>2. </th>
-                    <td>Email</td>
-                    <td>{userDetails.data.email}</td>
-                  </tr>
-                  {/* row 3 */}
-                  <tr>
-                    <th>3. </th>
-                    <td>D.O.B</td>
-                    <td>{userDetails.data.dateOfBirth}</td>
-                  </tr>
-                  <tr>
-                    <th>4. </th>
-                    <td>Fathe Name</td>
-                    <td>{userDetails.data.fatherName}</td>
-                  </tr>
-                  <tr>
-                    <th>5. </th>
-                    <td>Mother Name</td>
-                    <td>{userDetails.data.motherName}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div>
-              <h1 className="font-bold text-white text-3xl">
-                Contact Infromation
-              </h1>
-              <table className="table">
-                {/* head */}
-
-                <thead className="text-yellow-400">
-                  <tr>
-                    <th>Sr. No.</th>
-                    <th>Title</th>
-                    <th>Content</th>
-                  </tr>
-                </thead>
-                <tbody className="text-green-500">
-                  {/* row 1 */}
-                  <tr>
-                    <th>1. </th>
-                    <td>Mobile No.</td>
-                    <td>{userDetails.data.mobileNo}</td>
-                  </tr>
-                  {/* row 2 */}
-                  <tr className="hover">
-                    <th>2. </th>
-                    <td>WhatsApp</td>
-                    <td>{userDetails.data.whatsAppNumber}</td>
-                  </tr>
-                  {/* row 3 */}
-                  <tr>
-                    <th>3. </th>
-                    <td>Pan No.</td>
-                    <td>{userDetails.data.panNo}</td>
-                  </tr>
-                  <tr>
-                    <th>4. </th>
-                    <td>Aadhar No.</td>
-                    <td>{userDetails.data.aadharNo}</td>
-                  </tr> <tr>
-                    <th>5. </th>
-                    <td>Caste</td>
-                    <td>{userDetails.data.caste}</td>
-                  </tr> <tr>
-                    <th>6. </th>
-                    <td>Address</td>
-                    <td>{userDetails.data.address}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div className='overflow-x-auto'>
+            <h1 className='font-bold text-center text-white text-3xl'>
+              Personal Information
+            </h1>
+            <table className='min-w-full table-auto border'>
+              {/* head */}
+              <thead className='text-yellow-400'>
+                <tr>
+                  <th className='px-4 py-2'>Sr. No.</th>
+                  <th className='px-4 py-2'>Title</th>
+                  <th className='px-4 py-2'>Content</th>
+                </tr>
+              </thead>
+              <tbody className='text-green-500'>
+                {/* row 0 */}
+                {/* <tr>
+                  <td className='border px-4 py-2'>1.</td>
+                  <td className='border px-4 py-2'>Image</td>
+                  <td className='border px-4 py-2'>
+                    <img className='w-[200px]' src="https://img.freepik.com/free-photo/indian-man-smiling-cheerful-expression-closeup-portrait_53876-129387.jpg" alt="human image" />
+                  </td>
+                </tr> */}
+                {/* row 1 */}
+                <tr>
+                  <td className='border px-4 py-2'>1.</td>
+                  <td className='border px-4 py-2'>Full Name</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.fullName}
+                  </td>
+                </tr>
+                {/* row 2 */}
+                <tr>
+                  <td className='border px-4 py-2'>2.</td>
+                  <td className='border px-4 py-2'>Email</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.email}
+                  </td>
+                </tr>
+                {/* row 3 */}
+                <tr>
+                  <td className='border px-4 py-2'>3.</td>
+                  <td className='border px-4 py-2'>D.O.B</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.dateOfBirth}
+                  </td>
+                </tr>
+                <tr>
+                  <td className='border px-4 py-2'>4.</td>
+                  <td className='border px-4 py-2'>Father Name</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.fatherName}
+                  </td>
+                </tr>
+                <tr>
+                  <td className='border px-4 py-2'>5.</td>
+                  <td className='border px-4 py-2'>Mother Name</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.motherName}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+
+          <div className='overflow-x-auto lg:max-w-[600px] pb-10'>
+            <h1 className='font-bold text-center text-white text-3xl'>
+              Contact Information
+            </h1>
+            <table className='min-w-full table-auto border'>
+              {/* head */}
+              <thead className='text-yellow-400'>
+                <tr>
+                  <th className='px-4 py-2'>Sr. No.</th>
+                  <th className='px-4 py-2'>Title</th>
+                  <th className='px-4 py-2'>Content</th>
+                </tr>
+              </thead>
+              <tbody className='text-green-500'>
+                {/* row 1 */}
+                <tr>
+                  <td className='border px-4 py-2'>1.</td>
+                  <td className='border px-4 py-2'>Mobile No.</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.mobileNo}
+                  </td>
+                </tr>
+                {/* row 2 */}
+                <tr>
+                  <td className='border px-4 py-2'>2.</td>
+                  <td className='border px-4 py-2'>WhatsApp</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.whatsAppNumber}
+                  </td>
+                </tr>
+                {/* row 3 */}
+                <tr>
+                  <td className='border px-4 py-2'>3.</td>
+                  <td className='border px-4 py-2'>Pan No.</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.panNo}
+                  </td>
+                </tr>
+                <tr>
+                  <td className='border px-4 py-2'>4.</td>
+                  <td className='border px-4 py-2'>Aadhar No.</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.aadharNo}
+                  </td>
+                </tr>
+                <tr>
+                  <td className='border px-4 py-2'>5.</td>
+                  <td className='border px-4 py-2'>Caste</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.caste}
+                  </td>
+                </tr>
+                <tr>
+                  <td className='border px-4 py-2'>6.</td>
+                  <td className='border px-4 py-2'>Address</td>
+                  <td className='border px-4 py-2'>
+                    {userDetails.data.address}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
         ) : (null)}
       </div>
     </div>
